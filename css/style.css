@@ -1,0 +1,60 @@
+.loading-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+  display: flex;
+  align-items: center;
+}
+
+.loading-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #3e9acb;
+  font-size: 36px;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-buttons {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (orientation: portrait) {
+  .loading-wrapper {
+    background: radial-gradient(
+      179.89% 179.89% at 54.62% 163.06%,
+      #3e9acb 0%,
+      #000000 100%
+    );
+  }
+
+  .contact-buttons {
+    top: auto;
+    right: 0;
+    bottom: 32px;
+    left: 0;
+  }
+}
+
+@media (orientation: landscape) {
+  .loading-wrapper {
+    background: radial-gradient(
+      185.36% 586.37% at 156.09% 52.43%,
+      #3e9acb 0%,
+      #000000 100%
+    );
+  }
+
+  .contact-buttons {
+    top: 0;
+    right: 32px;
+    bottom: 0;
+    left: auto;
+    flex-direction: column-reverse;
+  }
+}
